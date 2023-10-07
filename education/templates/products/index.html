@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load embed_video_tags %}
+
+
+{% block content %}
+    <h1>Products</h1>
+
+    {% for item in videos %}
+
+        {% video item.url '426x240' %}
+        <p>{{ item.title }}</p>
+
+    {% endfor %}
+
+
+{% endblock content %}
